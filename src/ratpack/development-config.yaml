@@ -1,0 +1,19 @@
+##
+#
+
+router:
+  connectTimeout: 200ms
+  maxConnectionsPerHost: 20
+  readTimeout: 2s
+  updateInterval: 10s
+
+routing:
+  connectTimeout: 200ms
+  hosts:
+    jamesl:
+      - 127.0.0.1:8000
+      - 127.0.0.1:8001
+      - 127.0.0.1:8002
+  passthroughPath: /passthrough
+  readTimeout: 800ms
+  statusPath: /status
