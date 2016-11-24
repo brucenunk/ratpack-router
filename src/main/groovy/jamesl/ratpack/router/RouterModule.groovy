@@ -14,7 +14,6 @@ class RouterModule extends AbstractModule {
     protected void configure() {
         bind(ClientErrorHandler).to(RouterErrorHandler).in(Scopes.SINGLETON)
         bind(RemoteHostInfoProvider).to(DefaultRemoteHostInfoProvider).in(Scopes.SINGLETON)
-//        bind(RequestLogger).to(RequestRouterLogger).in(Scopes.SINGLETON)
         bind(RequestLogger).toInstance(RequestLogger.ncsa())
         bind(Router).in(Scopes.SINGLETON)
         bind(ServerErrorHandler).to(RouterErrorHandler).in(Scopes.SINGLETON)
